@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "node reviews.js"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.3.0",
+    "grpc": "^1.0.0",
+    "grpc-promise": "^1.4.0",
+    "httpdispatcher": "1.0.0"
+  }
+}

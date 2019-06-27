@@ -1,0 +1,26 @@
+syntax = "proto3";
+package ratings;
+
+service RatingsService {
+  rpc Get (GetRequest) returns (Ratings) { };
+  rpc Put (PutRequest) returns (Ratings) { };
+}
+
+message Reviewer {
+  string id = 1;
+  string rate = 2;
+}
+
+message GetRequest {
+  string productId = 1;
+}
+
+message PutRequest {
+  string productId = 1;
+  Reviewer reviewer = 2;
+}
+
+message Ratings {
+  string id = 1;
+  repeated Reviewer reviewers = 2;
+}
